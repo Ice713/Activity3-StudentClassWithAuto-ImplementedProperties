@@ -16,5 +16,17 @@ namespace Activity3_StudentClassWithAuto_ImplementedProperties
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Student student = new Student
+            {
+                FirstName = textBoxFirstName.Text,
+                LastName = textBoxLastName.Text,
+                GPA = double.Parse(numericUpDownGPA.Text)
+            };
+
+            MessageBox.Show($"Student: {student.FirstName} {student.LastName}\nGPA: {student.GPA}");
+        }
     }
 }
